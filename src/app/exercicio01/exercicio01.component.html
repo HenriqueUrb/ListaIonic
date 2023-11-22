@@ -1,0 +1,28 @@
+<div class="exercicio01" id="main">
+  <ion-item>
+    <ion-label>Exercício 01</ion-label>
+  </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Distância percorrida (Km)</ion-label>
+      <ion-input [(ngModel)]="distancia" type="number"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Litros gastos</ion-label>
+      <ion-input [(ngModel)]="litros" type="number"></ion-input>
+    </ion-item>
+  
+    <ion-button expand="full" (click)="calcularKmPorLitro()">Calcular</ion-button>
+  
+    <ion-item *ngIf="resultado !== undefined">
+      <ion-label>Resultado:</ion-label>
+      <ion-text>{{ resultado.toFixed(2) }} Km/l</ion-text>
+    </ion-item>
+  
+    <ion-item *ngIf="classificacao !== undefined">
+      <ion-label>Classificação:</ion-label>
+      <ion-text>{{ classificacao }}</ion-text>
+    </ion-item>
+  
+</div>

@@ -1,0 +1,34 @@
+<div class="exercicio05" id="main">
+  <ion-item>
+    <ion-label>Exercício 05</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      [(ngModel)]="numero1"
+      placeholder="Digite o primeiro número"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input
+      [(ngModel)]="numero2"
+      placeholder="Digite o segundo número"
+    ></ion-input>
+  </ion-item>
+  <ion-list>
+    <ion-select
+      label="Operação"
+      label-placement="stacked"
+      [(ngModel)]="operacao"
+    >
+      <ion-select-option value="A">Soma</ion-select-option>
+      <ion-select-option value="B">Subtração</ion-select-option>
+      <ion-select-option value="C">Multiplicação</ion-select-option>
+      <ion-select-option value="D">Divisão</ion-select-option>
+    </ion-select>
+  </ion-list>
+  <ion-item>
+    <ion-button (click)="calcular()">Calcular</ion-button>
+    <ion-button fill="outline" (click)="limpar()">Limpar</ion-button>
+  </ion-item>
+  <ion-label>Resultado: </ion-label><ion-label>{{resultado}}</ion-label>
+</div>

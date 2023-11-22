@@ -1,0 +1,25 @@
+<div class="exercicio02" id="main">
+  <ion-item>
+    <ion-label>Exercício 02</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Ano de Nascimento</ion-label>
+    <ion-input [(ngModel)]="anoNascimento" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="full" (click)="calcularIdade()">Calcular</ion-button>
+  
+  <ion-item *ngIf="idade !== null">
+    <ion-label>Idade:</ion-label>
+    <ion-text>{{ idade }}</ion-text>
+  </ion-item>
+  
+  <ion-item *ngIf="classificacao !== null">
+    <ion-label>Classificação:</ion-label>
+    <ion-text>{{ idade }} - {{ classificacao }}</ion-text>
+  </ion-item>
+  
+  <ion-button expand="full" (click)="limpar()">Limpar</ion-button>
+  
+  <ion-input [(ngModel)]="anoNascimento" type="number"></ion-input>
+</div>
